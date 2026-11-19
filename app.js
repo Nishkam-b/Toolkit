@@ -199,6 +199,23 @@
     if (added) render();
   }).catch(() => {});
 
+  /* ---------- Vibe coded projects ---------- */
+  const projects = window.PROJECTS || [];
+  if (!projects.length) $('projects').hidden = true;
+  $('projectList').innerHTML = projects.map((p, i) => {
+    const num = String(projects.length - i).padStart(2, '0');
+    return `<a class="project${i === 0 ? ' is-featured' : ''}" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">
+      <div class="project-shot"><img src="${esc(p.image)}" alt="Screenshot of ${esc(p.title)}" loading="lazy" /></div>
+      <div class="project-body">
+        <div class="project-meta"><span class="reel">#${num}</span>${p.date ? `<span>${esc(p.date)}</span>` : ''}</div>
+        <h3>${esc(p.title)}</h3>
+        <p>${esc(p.description)}</p>
+        <ul class="tags">${(p.tags || []).map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
+        <span class="btn btn-primary project-cta">Open tool ↗</span>
+      </div>
+    </a>`;
+  }).join('');
+
   $('year').textContent = new Date().getFullYear();
   render();
 })();

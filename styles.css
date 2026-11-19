@@ -114,6 +114,35 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .section-head h2 { font-size: clamp(32px, 4.5vw, 44px); }
 .section-head p { color: var(--muted); margin-top: 8px; max-width: 36em; }
 
+/* ---------- Vibe coded projects ---------- */
+.projects { padding-block: 72px 88px; border-top: 1px solid var(--line); }
+.projects[hidden] { display: none; }
+.projects .section-head h2 { margin-top: 6px; }
+.project-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.project {
+  display: flex; flex-direction: column; text-decoration: none; overflow: hidden;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+  transition: border-color .15s, transform .15s;
+}
+.project:hover { border-color: var(--ink); transform: translateY(-2px); }
+.project-shot { background: var(--bg); border-bottom: 1px solid var(--line); overflow: hidden; }
+.project-shot img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: top left; transition: transform .4s; }
+.project:hover .project-shot img { transform: scale(1.02); }
+.project-body { padding: 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.project-meta { display: flex; gap: 12px; font-size: 13px; color: var(--muted); }
+.project-meta .reel { font-family: var(--mono); color: var(--accent); }
+.project h3 { font-size: 24px; }
+.project p { color: var(--muted); }
+.tags { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.tags li { font-size: 12px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.project-cta { align-self: flex-start; margin-top: auto; }
+.project.is-featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.6fr 1fr; }
+.project.is-featured .project-shot { border-bottom: 0; border-right: 1px solid var(--line); }
+.project.is-featured .project-shot img { height: 100%; aspect-ratio: auto; min-height: 320px; }
+.project.is-featured .project-body { padding: 36px; justify-content: center; gap: 14px; }
+.project.is-featured h3 { font-size: clamp(28px, 3.4vw, 38px); }
+.project.is-featured .project-cta { margin-top: 12px; }
+
 /* ---------- Vault ---------- */
 .vault { padding-block: 72px 96px; border-top: 1px solid var(--line); }
 .controls { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
@@ -213,6 +242,11 @@ textarea { font: 13px/1.6 var(--mono); background: var(--code-bg); color: var(--
   .portrait { justify-self: start; max-width: 340px; order: -1; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .work-grid { grid-template-columns: 1fr; gap: 36px; }
+  .project-list { grid-template-columns: 1fr; }
+  .project.is-featured { display: flex; }
+  .project.is-featured .project-shot { border-right: 0; border-bottom: 1px solid var(--line); }
+  .project.is-featured .project-shot img { aspect-ratio: 16 / 9; min-height: 0; }
+  .project.is-featured .project-body { padding: 24px; }
 }
 @media (max-width: 600px) {
   .nav { display: none; }
