@@ -20,8 +20,8 @@ Every AI tool, website and prompt shared on [@nishkambhatia](https://www.instagr
 ## Adding a vibe coded project
 
 1. Upload a screenshot to `assets/projects/` (e.g. `my-tool.png`).
-2. In `assets/projects.js`, copy the existing block and paste it at the **top** of the list. Fill in title, url, image, description and tags.
+2. In `assets/projects.js`, copy the last block and paste it at the **bottom** of the list. Fill in title, url, image, description and tags.
 
-The newest project shows as the big featured card; older ones sit in a two-column grid below it. Numbers (#01, #02…) are added automatically.
+Projects appear in list order and are numbered automatically (#01, #02…). The first one is shown wide; the rest sit in a two-column grid, and a card left alone in its row is shown wide too.
 
 Hosted with GitHub Pages — no build step.
