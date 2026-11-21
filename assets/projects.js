@@ -17,5 +17,13 @@ window.PROJECTS = [
     description: 'Passport photos, made at home. Take a selfie against any wall — AI swaps the background, sizes your face to official rules for India, US, UK, Schengen, Canada and more, and gives you a print-ready sheet.',
     tags: ['Passport photo', 'Free', 'No sign-up', 'No watermark'],
     date: 'Nov 2026'
+  },
+  {
+    title: 'School ID Card Generator',
+    url: 'https://nishtek.in/id-card-generator/',
+    image: 'assets/projects/id-card-generator.webp',
+    description: 'Bulk school ID cards from an Excel sheet. Auto-match student photos by roll number, pick from 8 templates, add the principal\'s signature and export print-ready 300 DPI A4 sheets — all in your browser.',
+    tags: ['ID cards', 'Schools', 'Free', 'No upload'],
+    date: 'Nov 2026'
   }
 ];
