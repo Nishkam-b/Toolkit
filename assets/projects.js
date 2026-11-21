@@ -4,7 +4,7 @@
 window.PROJECTS = [
   {
     title: 'Nishtek PDF',
-    url: 'https://nishkam-b.github.io/nishtek-pdf-editor/',
+    url: 'https://nishtek.in/pdf-editor/',
     image: 'assets/projects/nishtek-pdf.png',
     description: 'A free PDF editor that runs in your browser. Edit text, sign, highlight, fill forms, merge, reorder pages and convert — your files never leave your device.',
     tags: ['PDF editor', 'Free', 'No upload'],
@@ -12,7 +12,7 @@ window.PROJECTS = [
   },
   {
     title: 'Passport Photo Maker',
-    url: 'https://nishkam-b.github.io/passport-photo-maker/',
+    url: 'https://nishtek.in/passport-photo-generator/',
     image: 'assets/projects/passport-photo-maker.png',
     description: 'Passport photos, made at home. Take a selfie against any wall — AI swaps the background, sizes your face to official rules for India, US, UK, Schengen, Canada and more, and gives you a print-ready sheet.',
     tags: ['Passport photo', 'Free', 'No sign-up', 'No watermark'],
