@@ -204,8 +204,8 @@
   if (!projects.length) $('projects').hidden = true;
   $('projectList').innerHTML = projects.map((p, i) => {
     const num = String(i + 1).padStart(2, '0');
-    // First card is wide; a last card left alone in its row is wide too, so the grid never has a gap.
-    const wide = i === 0 || (i === projects.length - 1 && (projects.length - 1) % 2 === 1);
+    // All tools share one even 3x3-style grid (3 per row on desktop, 2 on tablet, 1 on phone).
+    const wide = false;
     return `<a class="project${wide ? ' is-featured' : ''}" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">
       <div class="project-shot"><img src="${esc(p.image)}" alt="Screenshot of ${esc(p.title)}" loading="lazy" /></div>
       <div class="project-body">
